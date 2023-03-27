@@ -16,7 +16,7 @@ public class MsmsconvocatoriasApplication  implements WebMvcConfigurer{
 	@Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS")
-                .allowedOrigins("http://37.44.247.214:88")
+                .allowedOrigins("http://localhost:88")
                // .allowedOrigins("http://ika.cnsc.net:8080")
                 .allowedHeaders("Authorization", "Cache-Control", "Content-Type", "tokenrpca", "Accept", "X-Requested-With", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Origin")
                 .exposedHeaders("Access-Control-Expose-Headers", "Authorization", "Cache-Control", "Content-Type", "tokenrpca", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Origin")
