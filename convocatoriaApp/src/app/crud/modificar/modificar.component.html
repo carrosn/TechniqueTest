@@ -1,0 +1,48 @@
+
+
+<a  routerLink="/" (click)="regresar()">Volver</a>
+
+<div class="container">
+<div class="text-center">
+<H1>Editar Convocatoria</H1>
+</div>
+<form class="was-validated" action="">
+        
+    <div class="col-md-4 mb-3">
+        <label for="numero">* Número de Convocatoria</label>
+        <input type="text" class="form-control is-valid" id="numero" [(ngModel)]="convocatoriaAct.numero"  name="numero" placeholder="Número de convocatoria"  required>
+        
+      </div>
+      <div class="mb-3">
+        <label for="titulo">* Título</label>
+        <textarea class="form-control is-invalid" id="titulo" name="titulo" placeholder="Título" [(ngModel)]="convocatoriaAct.titulo" required></textarea>
+        
+      </div>
+    
+    <div class="mb-3">
+          <label for="descripcion">* Descripción</label>
+          <textarea class="form-control is-invalid" id="descripcion" placeholder="Descripción" [(ngModel)]="convocatoriaAct.descripcion" name="descripcion"required></textarea>
+          
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="estado" >* Estado</label>
+            <select class="form-control" [(ngModel)]="convocatoriaAct.estado" name="estado">
+                <option selected>Seleccione...</option>
+                <option value="Abierta">Abierta</option>
+                <option value="Cerrada">Cerrada</option>
+                
+              </select>
+          
+          </div> 
+        
+      <div class="col-md-4 mb-3">
+        <label for="fechaAp" >* Fecha apertura y cierre</label>
+        <input type="text" class="form-control is-valid" id="fechaAp" [(ngModel)]="convocatoriaAct.fechaAp"  name="fechaAp" placeholder="Fecha apertura y cierre"  required>
+        
+      </div> 
+</form>
+<button type="submit" class="btn btn-primary" (click)="modificar()">Guardar</button>
+
+</div>
+
